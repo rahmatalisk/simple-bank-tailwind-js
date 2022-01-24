@@ -1,10 +1,13 @@
 
 //get Input Amount
 function getInputAmount(inputtext){
-    const inputText= document.getElementById(inputtext).value;
-    const inputAmount = parseFloat(inputText);
+    let inputText= document.getElementById(inputtext).value;
+    if(inputText == ''){
+        inputText = 00;
+    }
+    const inputAmount = parseFloat(inputText);    
     document.getElementById(inputtext).value = '';
-    return inputAmount;
+    return inputAmount;        
 };
 
 //get Previous Amount & total balance
